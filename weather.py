@@ -57,7 +57,7 @@ def get_weather():
         weather_icon = WEATHER_ICONS.get(weather_description, "🌈")
 
         # Formata a resposta em texto
-        weather_info = f"Clima atual: {weather_description} {weather_icon}  {temp}°C"
+        weather_info = f"Current weather:{weather_description} {weather_icon}  {temp}°Cend1"
         return weather_info
 
     except requests.exceptions.RequestException as e:
