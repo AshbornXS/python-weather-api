@@ -19,7 +19,7 @@ weather_icons = {
 
 @app.route('/weather', methods=['GET'])
 def get_weather():
-    api_key = requests.args.get('key', default='', type=str)
+    api_key = request.args.get('key', default='', type=str)
     city = request.args.get('city', default='', type=str)  # Obtém a cidade da URL do request
 
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric&lang=pt_br"
